@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllerChoose : UIViewController
+@interface ViewControllerChoose : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 - (IBAction) BtnSelect;
+
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
+
+//@property (nonatomic, strong)          NSMutableArray *marName;
 
 @end

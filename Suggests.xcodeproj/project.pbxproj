@@ -17,6 +17,11 @@
 		163A08501AFB875200482B7B /* Like.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A084F1AFB875200482B7B /* Like.png */; };
 		163A08531AFB93B000482B7B /* ViewControllerChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08521AFB93B000482B7B /* ViewControllerChoose.m */; };
 		163A08561AFB9CD300482B7B /* ViewControllerSignUpDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08551AFB9CD300482B7B /* ViewControllerSignUpDetails.m */; };
+		163A085C1AFBB7B100482B7B /* ViewControllerFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A085B1AFBB7B100482B7B /* ViewControllerFood.m */; };
+		163A085F1AFBC03600482B7B /* TableViewCellFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A085E1AFBC03600482B7B /* TableViewCellFood.m */; };
+		163A08621AFBC18B00482B7B /* TableViewCellDrink.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08611AFBC18B00482B7B /* TableViewCellDrink.m */; };
+		163A08651AFBC1BE00482B7B /* TableViewCellSnacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08641AFBC1BE00482B7B /* TableViewCellSnacks.m */; };
+		163A08681AFBC1F400482B7B /* ViewControllerInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08671AFBC1F400482B7B /* ViewControllerInformation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,16 @@
 		163A08521AFB93B000482B7B /* ViewControllerChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerChoose.m; path = Suggests/ViewControllerChoose.m; sourceTree = "<group>"; };
 		163A08541AFB9CD300482B7B /* ViewControllerSignUpDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSignUpDetails.h; sourceTree = "<group>"; };
 		163A08551AFB9CD300482B7B /* ViewControllerSignUpDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSignUpDetails.m; sourceTree = "<group>"; };
+		163A085A1AFBB7B100482B7B /* ViewControllerFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerFood.h; sourceTree = "<group>"; };
+		163A085B1AFBB7B100482B7B /* ViewControllerFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerFood.m; sourceTree = "<group>"; };
+		163A085D1AFBC03600482B7B /* TableViewCellFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellFood.h; sourceTree = "<group>"; };
+		163A085E1AFBC03600482B7B /* TableViewCellFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellFood.m; sourceTree = "<group>"; };
+		163A08601AFBC18B00482B7B /* TableViewCellDrink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellDrink.h; sourceTree = "<group>"; };
+		163A08611AFBC18B00482B7B /* TableViewCellDrink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellDrink.m; sourceTree = "<group>"; };
+		163A08631AFBC1BE00482B7B /* TableViewCellSnacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellSnacks.h; sourceTree = "<group>"; };
+		163A08641AFBC1BE00482B7B /* TableViewCellSnacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellSnacks.m; sourceTree = "<group>"; };
+		163A08661AFBC1F400482B7B /* ViewControllerInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerInformation.h; sourceTree = "<group>"; };
+		163A08671AFBC1F400482B7B /* ViewControllerInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerInformation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +169,16 @@
 			children = (
 				163A08511AFB93B000482B7B /* ViewControllerChoose.h */,
 				163A08521AFB93B000482B7B /* ViewControllerChoose.m */,
+				163A085A1AFBB7B100482B7B /* ViewControllerFood.h */,
+				163A085B1AFBB7B100482B7B /* ViewControllerFood.m */,
+				163A085D1AFBC03600482B7B /* TableViewCellFood.h */,
+				163A085E1AFBC03600482B7B /* TableViewCellFood.m */,
+				163A08601AFBC18B00482B7B /* TableViewCellDrink.h */,
+				163A08611AFBC18B00482B7B /* TableViewCellDrink.m */,
+				163A08631AFBC1BE00482B7B /* TableViewCellSnacks.h */,
+				163A08641AFBC1BE00482B7B /* TableViewCellSnacks.m */,
+				163A08661AFBC1F400482B7B /* ViewControllerInformation.h */,
+				163A08671AFBC1F400482B7B /* ViewControllerInformation.m */,
 			);
 			name = "Tab 1";
 			sourceTree = "<group>";
@@ -259,9 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163A085F1AFBC03600482B7B /* TableViewCellFood.m in Sources */,
 				163A08311AFB80F900482B7B /* ViewControllerSignIn.m in Sources */,
+				163A08621AFBC18B00482B7B /* TableViewCellDrink.m in Sources */,
 				163A08561AFB9CD300482B7B /* ViewControllerSignUpDetails.m in Sources */,
+				163A085C1AFBB7B100482B7B /* ViewControllerFood.m in Sources */,
+				163A08651AFBC1BE00482B7B /* TableViewCellSnacks.m in Sources */,
 				163A08531AFB93B000482B7B /* ViewControllerChoose.m in Sources */,
+				163A08681AFBC1F400482B7B /* ViewControllerInformation.m in Sources */,
 				163A082E1AFB80F900482B7B /* AppDelegate.m in Sources */,
 				163A082B1AFB80F900482B7B /* main.m in Sources */,
 			);

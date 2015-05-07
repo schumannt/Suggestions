@@ -38,6 +38,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="BtnSignIn" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5n8-Wp-fUZ"/>
                                     <segue destination="2lN-Cz-ASA" kind="push" id="7XM-Vw-p60"/>
                                 </connections>
                             </button>
@@ -47,6 +48,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="BtnSignUp" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qY2-p9-Vmc"/>
                                     <segue destination="9ZU-Rl-14c" kind="push" id="ZyM-xj-wVh"/>
                                 </connections>
                             </button>
@@ -143,7 +145,7 @@
         <!--Choose-->
         <scene sceneID="VTA-hC-6IR">
             <objects>
-                <viewController storyboardIdentifier="Choose" title="Choose" id="kM8-Uz-upL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Choose" title="Choose" id="kM8-Uz-upL" customClass="ViewControllerChoose" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4OE-KM-0jF"/>
                         <viewControllerLayoutGuide type="bottom" id="icu-Fv-W8c"/>
@@ -158,22 +160,28 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9Ex-cW-JCt" kind="push" id="6aX-Xx-vX0"/>
+                                    <segue destination="9Ex-cW-JCt" kind="push" id="k4k-cc-Kjh"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4RB-L5-nIf">
+                                <rect key="frame" x="0.0" y="236" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NeP-bj-ZKW"/>
+                    <connections>
+                        <outlet property="picker" destination="4RB-L5-nIf" id="b7B-nu-RlQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1i-Ff-uI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234" y="150"/>
+            <point key="canvasLocation" x="1234" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Food-->
         <scene sceneID="wCb-7L-rwK">
             <objects>
-                <viewController id="9Ex-cW-JCt" sceneMemberID="viewController">
+                <viewController title="Food" id="9Ex-cW-JCt" customClass="ViewControllerFood" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5y2-pc-Is9"/>
                         <viewControllerLayoutGuide type="bottom" id="aye-Bg-Xdf"/>
@@ -181,10 +189,78 @@
                     <view key="view" contentMode="scaleToFill" id="YBf-bd-8Vm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l7V-xs-yR2">
+                                <rect key="frame" x="16" y="78" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Food"/>
+                                    <segment title="Drinks"/>
+                                    <segment title="Snacks"/>
+                                </segments>
+                                <connections>
+                                    <action selector="scFoodType" destination="9Ex-cW-JCt" eventType="valueChanged" id="ows-en-gA3"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-Uz-krU">
+                                <rect key="frame" x="16" y="122" width="288" height="140"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2Qj-0h-kho">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Qj-0h-kho" id="tWj-BD-597">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9Ex-cW-JCt" id="bhT-f9-wMg"/>
+                                    <outlet property="delegate" destination="9Ex-cW-JCt" id="LpN-TO-ACd"/>
+                                </connections>
+                            </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0nj-Eh-nHG">
+                                <rect key="frame" x="14" y="279" width="293" height="87"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vWl-hP-Hrs">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vWl-hP-Hrs" id="tDl-Mh-1Uk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9Ex-cW-JCt" id="CXz-tm-jOE"/>
+                                    <outlet property="delegate" destination="9Ex-cW-JCt" id="aY1-5L-zGW"/>
+                                </connections>
+                            </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QC7-pF-LXz">
+                                <rect key="frame" x="16" y="394" width="291" height="117"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2OH-99-7kk">
+                                        <rect key="frame" x="0.0" y="0.0" width="291" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2OH-99-7kk" id="3za-y3-wa6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9Ex-cW-JCt" id="wrh-go-Y0O"/>
+                                    <outlet property="delegate" destination="9Ex-cW-JCt" id="75T-ml-oSx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="TrX-vD-Daf"/>
                     <connections>
+                        <outlet property="tvDrink" destination="0nj-Eh-nHG" id="KwD-B2-BON"/>
+                        <outlet property="tvFood" destination="XDM-Uz-krU" id="5SD-a3-p8O"/>
+                        <outlet property="tvSnack" destination="QC7-pF-LXz" id="MkG-gP-5AR"/>
+                        <outlet property="uscFoodType" destination="l7V-xs-yR2" id="WaM-AQ-XGA"/>
                         <segue destination="GoP-xx-Kwf" kind="push" id="1Fb-cj-EeI"/>
                     </connections>
                 </viewController>
@@ -192,10 +268,10 @@
             </objects>
             <point key="canvasLocation" x="1642" y="150"/>
         </scene>
-        <!--View Controller-->
+        <!--Information-->
         <scene sceneID="ufg-3r-Ph0">
             <objects>
-                <viewController id="GoP-xx-Kwf" sceneMemberID="viewController">
+                <viewController title="Information" id="GoP-xx-Kwf" customClass="ViewControllerInformation" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="61k-zc-RYf"/>
                         <viewControllerLayoutGuide type="bottom" id="Qtn-wx-Odz"/>
@@ -203,6 +279,29 @@
                     <view key="view" contentMode="scaleToFill" id="mOB-8p-y2C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuL-in-aib">
+                                <rect key="frame" x="73" y="86" width="174" height="182"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRE-Ja-BdM">
+                                <rect key="frame" x="116" y="281" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wme-wG-CkF">
+                                <rect key="frame" x="140" y="310" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calorie Count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgR-Mi-PUB">
+                                <rect key="frame" x="107" y="339" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ars-sY-Gb6"/>
