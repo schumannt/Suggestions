@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="g3o-Po-nHP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="g3o-Po-nHP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Sign In-->
@@ -256,7 +256,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAh-K0-7vj">
-                                                    <rect key="frame" x="74" y="33" width="40" height="21"/>
+                                                    <rect key="frame" x="74" y="34" width="63" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -280,6 +280,10 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ivProductImage" destination="deE-bp-yNL" id="Vwj-Qj-kpV"/>
+                                            <outlet property="ivTickBox" destination="ERh-oG-9WY" id="8L1-Mt-zDC"/>
+                                            <outlet property="lblProductKcal" destination="kQj-JS-my6" id="prf-9s-eXX"/>
+                                            <outlet property="lblProductName" destination="IlQ-29-ZPy" id="bzK-eT-pzg"/>
+                                            <outlet property="lblProductPrice" destination="EAh-K0-7vj" id="IAr-qM-7Fu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -336,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8J-gM-ZQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="146"/>
+            <point key="canvasLocation" x="1642" y="145"/>
         </scene>
         <!--Information-->
         <scene sceneID="ufg-3r-Ph0">

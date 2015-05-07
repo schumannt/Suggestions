@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>01A5E901-5A51-4552-ADAB-6FBF68F1CEFA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Suggests</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>52E4AEFD7BAEC3D7E7CA9F5B657B1060D861E511</key>
 		<string>https://github.com/schumannt/Suggestions.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Suggests.xcodeproj/project.xcworkspace</string>
+	<string>Suggests.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>52E4AEFD7BAEC3D7E7CA9F5B657B1060D861E511</key>

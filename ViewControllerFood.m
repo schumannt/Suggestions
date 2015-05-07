@@ -156,13 +156,16 @@
     TableViewCellFood *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
         NSMutableDictionary *dOneProduct = self.marFoodList[indexPath.row];
-        NSMutableDictionary *dDetailOneProduct = dOneProduct[@"_Source"];
 
+        NSMutableDictionary *dDetailOneProduct = dOneProduct[@"_source"];
+        //NSLog(@"dDetailOneProduct %@", dDetailOneProduct);
         cell.lblProductName.text = dDetailOneProduct[@"name"];
-        cell.lblProductKcal.text = dDetailOneProduct[@"Cals"];
-        cell.lblProductPrice.text = dDetailOneProduct[@"normalPrice"];
+
+        cell.lblProductPrice.text = [NSString stringWithFormat:@"£%@", dDetailOneProduct[@"normalPrice"]];
+        cell.lblProductKcal.text = [NSString stringWithFormat:@"%@", dDetailOneProduct[@"Cals"]];
         cell.ivProductImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:dDetailOneProduct[@"image"]]]];
-        NSLog(@"cell label product name %@", cell.lblProductName.text);
+        
+        NSLog(@"image string!!! %@", dDetailOneProduct[@"image"]);
     return cell;
     }
     
