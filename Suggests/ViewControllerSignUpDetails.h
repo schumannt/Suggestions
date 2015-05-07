@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ViewControllerSignUpDetails.h
 //  Suggests
 //
 //  Created by group16 on 07/05/2015.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllerSignIn : UIViewController
-
-- (IBAction) BtnSignIn;
-- (IBAction) BtnSignUp;
+@interface ViewControllerSignUpDetails : UIViewController
 
 @end
-

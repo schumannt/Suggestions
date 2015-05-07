@@ -15,6 +15,8 @@
 		163A08391AFB80F900482B7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163A08371AFB80F900482B7B /* LaunchScreen.xib */; };
 		163A08451AFB80F900482B7B /* SuggestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08441AFB80F900482B7B /* SuggestsTests.m */; };
 		163A08501AFB875200482B7B /* Like.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A084F1AFB875200482B7B /* Like.png */; };
+		163A08531AFB93B000482B7B /* ViewControllerChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08521AFB93B000482B7B /* ViewControllerChoose.m */; };
+		163A08561AFB9CD300482B7B /* ViewControllerSignUpDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08551AFB9CD300482B7B /* ViewControllerSignUpDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		163A08431AFB80F900482B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		163A08441AFB80F900482B7B /* SuggestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestsTests.m; sourceTree = "<group>"; };
 		163A084F1AFB875200482B7B /* Like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Like.png; sourceTree = "<group>"; };
+		163A08511AFB93B000482B7B /* ViewControllerChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerChoose.h; path = Suggests/ViewControllerChoose.h; sourceTree = "<group>"; };
+		163A08521AFB93B000482B7B /* ViewControllerChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerChoose.m; path = Suggests/ViewControllerChoose.m; sourceTree = "<group>"; };
+		163A08541AFB9CD300482B7B /* ViewControllerSignUpDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSignUpDetails.h; sourceTree = "<group>"; };
+		163A08551AFB9CD300482B7B /* ViewControllerSignUpDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSignUpDetails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +71,13 @@
 		163A081C1AFB80F900482B7B = {
 			isa = PBXGroup;
 			children = (
+				163A08321AFB80F900482B7B /* Main.storyboard */,
+				163A08571AFB9D6F00482B7B /* Home */,
+				163A08591AFB9DF900482B7B /* Tab 1 */,
+				163A084E1AFB871000482B7B /* Images */,
 				163A08271AFB80F900482B7B /* Suggests */,
 				163A08411AFB80F900482B7B /* SuggestsTests */,
 				163A08261AFB80F900482B7B /* Products */,
-				163A084E1AFB871000482B7B /* Images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +95,6 @@
 			children = (
 				163A082C1AFB80F900482B7B /* AppDelegate.h */,
 				163A082D1AFB80F900482B7B /* AppDelegate.m */,
-				163A082F1AFB80F900482B7B /* ViewControllerSignIn.h */,
-				163A08301AFB80F900482B7B /* ViewControllerSignIn.m */,
-				163A08321AFB80F900482B7B /* Main.storyboard */,
 				163A08351AFB80F900482B7B /* Images.xcassets */,
 				163A08371AFB80F900482B7B /* LaunchScreen.xib */,
 				163A08281AFB80F900482B7B /* Supporting Files */,
@@ -129,6 +135,27 @@
 			);
 			name = Images;
 			path = Suggests;
+			sourceTree = "<group>";
+		};
+		163A08571AFB9D6F00482B7B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				163A082F1AFB80F900482B7B /* ViewControllerSignIn.h */,
+				163A08301AFB80F900482B7B /* ViewControllerSignIn.m */,
+				163A08541AFB9CD300482B7B /* ViewControllerSignUpDetails.h */,
+				163A08551AFB9CD300482B7B /* ViewControllerSignUpDetails.m */,
+			);
+			name = Home;
+			path = Suggests;
+			sourceTree = "<group>";
+		};
+		163A08591AFB9DF900482B7B /* Tab 1 */ = {
+			isa = PBXGroup;
+			children = (
+				163A08511AFB93B000482B7B /* ViewControllerChoose.h */,
+				163A08521AFB93B000482B7B /* ViewControllerChoose.m */,
+			);
+			name = "Tab 1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				163A08311AFB80F900482B7B /* ViewControllerSignIn.m in Sources */,
+				163A08561AFB9CD300482B7B /* ViewControllerSignUpDetails.m in Sources */,
+				163A08531AFB93B000482B7B /* ViewControllerChoose.m in Sources */,
 				163A082E1AFB80F900482B7B /* AppDelegate.m in Sources */,
 				163A082B1AFB80F900482B7B /* main.m in Sources */,
 			);
@@ -263,6 +292,7 @@
 				163A08331AFB80F900482B7B /* Base */,
 			);
 			name = Main.storyboard;
+			path = Suggests;
 			sourceTree = "<group>";
 		};
 		163A08371AFB80F900482B7B /* LaunchScreen.xib */ = {
@@ -425,6 +455,7 @@
 				163A084A1AFB80F900482B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		163A084B1AFB80F900482B7B /* Build configuration list for PBXNativeTarget "SuggestsTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +464,7 @@
 				163A084D1AFB80F900482B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

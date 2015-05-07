@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ViewControllerChoose.h
 //  Suggests
 //
 //  Created by group16 on 07/05/2015.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllerSignIn : UIViewController
+@interface ViewControllerChoose : UIViewController
 
-- (IBAction) BtnSignIn;
-- (IBAction) BtnSignUp;
+- (IBAction) BtnSelect;
 
 @end
-

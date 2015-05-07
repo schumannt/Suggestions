@@ -24,4 +24,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+- (IBAction) BtnSignIn {
+    ViewControllerChoose *vcChoose = [[[ViewControllerChoose alloc] initWithNibName:nil bundle:nil]];
+    [self pres]
+}
+*/
+
+- (IBAction) BtnSignIn {
+    
+}
+
+- (IBAction) BtnSignUp {
+    
+}
+
 @end

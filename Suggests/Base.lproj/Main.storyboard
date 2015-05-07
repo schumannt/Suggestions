@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="g3o-Po-nHP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gyf-UF-MXx">
+            <objects>
+                <navigationController id="laH-K2-G8n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oRQ-fL-iDM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="pC7-38-CGY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6kN-QR-Rd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1033" y="423"/>
+        </scene>
         <!--Sign In-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -22,7 +38,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="g3o-Po-nHP" kind="push" id="FZM-Hk-q0q"/>
+                                    <segue destination="2lN-Cz-ASA" kind="push" id="7XM-Vw-p60"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu2-t6-TCZ">
@@ -31,21 +47,47 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9ZU-Rl-14c" kind="push" id="273-w0-Ysg"/>
+                                    <segue destination="9ZU-Rl-14c" kind="push" id="ZyM-xj-wVh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hN8-8e-Z9O"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-124" y="437"/>
+            <point key="canvasLocation" x="-603" y="423"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In Web-->
+        <scene sceneID="cz1-Ry-LAp">
+            <objects>
+                <viewController title="Sign In Web" id="2lN-Cz-ASA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FyA-FP-AQm"/>
+                        <viewControllerLayoutGuide type="bottom" id="k4y-51-V0z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QB2-yK-7TC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nvz-Yj-T8w">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Enk-uR-amK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iC-NL-mSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-182" y="423"/>
+        </scene>
+        <!--Sign Up Details-->
         <scene sceneID="f7e-gz-UW0">
             <objects>
-                <viewController id="9ZU-Rl-14c" sceneMemberID="viewController">
+                <viewController title="Sign Up Details" id="9ZU-Rl-14c" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e7Q-Zg-RaC"/>
                         <viewControllerLayoutGuide type="bottom" id="34l-d7-Pdj"/>
@@ -59,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qk-xo-Eo5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-124" y="1111"/>
+            <point key="canvasLocation" x="-603" y="1111"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y4t-Hi-OPg">
@@ -98,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="808" y="150"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose-->
         <scene sceneID="VTA-hC-6IR">
             <objects>
-                <viewController id="kM8-Uz-upL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Choose" title="Choose" id="kM8-Uz-upL" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4OE-KM-0jF"/>
                         <viewControllerLayoutGuide type="bottom" id="icu-Fv-W8c"/>
@@ -109,12 +151,20 @@
                     <view key="view" contentMode="scaleToFill" id="lpn-DA-Yrr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO8-kW-pQZ">
+                                <rect key="frame" x="139" y="466" width="43" height="30"/>
+                                <state key="normal" title="Select">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Ex-cW-JCt" kind="push" id="6aX-Xx-vX0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NeP-bj-ZKW"/>
-                    <connections>
-                        <segue destination="9Ex-cW-JCt" kind="push" id="QrR-PE-9eH"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1i-Ff-uI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
