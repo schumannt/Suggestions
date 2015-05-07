@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllerSettings : UIViewController
+@interface ViewControllerSettings : UIViewController <UITableViewDataSource, UITableViewDataSource>
+
+@property (nonatomic, weak) IBOutlet UITableView *tvSettings;
+@property (nonatomic, strong) NSMutableArray *marSettings;
+
 
 @end
