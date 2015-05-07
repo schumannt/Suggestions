@@ -12,8 +12,16 @@
 
 - (IBAction) BtnSelect;
 
-@property (weak, nonatomic) IBOutlet UIPickerView *picker;
+@property (nonatomic, weak) IBOutlet UILabel *lblRemaining;
+@property (nonatomic, weak) IBOutlet UILabel *lblBurnt;
 
-//@property (nonatomic, strong)          NSMutableArray *marName;
+@property (nonatomic, strong) NSMutableArray *marMeal;
+@property (nonatomic, strong) NSMutableArray *marType;
+@property (nonatomic, strong) NSMutableArray *marCost;
+
+@property (strong, nonatomic) IBOutlet UIPickerView *picker;
+@property (strong, nonatomic) IBOutlet UILabel *lblMealChoice;
+@property (strong, nonatomic) IBOutlet UILabel *lblTypeChoice;
+@property (strong, nonatomic) IBOutlet UILabel *lblCostChoice;
 
 @end
