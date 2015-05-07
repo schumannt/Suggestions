@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.marFood = [[NSMutableArray alloc]init];
+    /*self.marFood = [[NSMutableArray alloc]init];
     [self.marFood addObject:@"Chicken Sandwich"];
     [self.marFood addObject:@"Cheese and tomato Sandwich"];
     [self.marFood addObject:@"Pesto Salad"];
@@ -34,7 +34,7 @@
     self.marSnack = [[NSMutableArray alloc]init];
     [self.marSnack addObject:@"Kit Kat"];
     [self.marSnack addObject:@"Boost"];
-    
+    */
     
     [self getFoodChoices];
 }

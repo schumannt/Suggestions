@@ -253,7 +253,7 @@
                                 <rect key="frame" x="16" y="122" width="288" height="140"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="65" id="2Qj-0h-kho">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="65" id="2Qj-0h-kho" customClass="TableViewCellFood">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Qj-0h-kho" id="tWj-BD-597">
@@ -262,7 +262,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deE-bp-yNL">
                                                     <rect key="frame" x="8" y="4" width="58" height="58"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlQ-29-ZPy">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlQ-29-ZPy">
                                                     <rect key="frame" x="74" y="5" width="140" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -291,6 +291,13 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivProductImage" destination="deE-bp-yNL" id="Vwj-Qj-kpV"/>
+                                            <outlet property="ivTickBox" destination="ERh-oG-9WY" id="pnL-AA-yQf"/>
+                                            <outlet property="lblProductKcal" destination="kQj-JS-my6" id="4Qg-YS-Da0"/>
+                                            <outlet property="lblProductName" destination="IlQ-29-ZPy" id="9ec-Np-DW9"/>
+                                            <outlet property="lblProductPrice" destination="EAh-K0-7vj" id="VCm-1Q-TCb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

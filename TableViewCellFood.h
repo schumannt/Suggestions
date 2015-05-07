@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewControllerFood.h"
 
 @interface TableViewCellFood : UITableViewCell
+
+@property (nonatomic, weak) IBOutlet UILabel *lblProductName;
+@property (nonatomic, weak) IBOutlet UILabel *lblProductPrice;
+@property (nonatomic, weak) IBOutlet UILabel *lblProductKcal;
+@property (nonatomic, weak) IBOutlet UIImageView *ivProductImage;
+@property (nonatomic, weak) IBOutlet UIImageView *ivTickBox;
 
 @end
