@@ -34,6 +34,38 @@
     self.marSnack = [[NSMutableArray alloc]init];
     [self.marSnack addObject:@"Kit Kat"];
     [self.marSnack addObject:@"Boost"];
+    
+    
+    
+        //NSMutableDictionary *dFood = [[NSMutableDictionary alloc] init];
+    
+        NSString *strAisle = @"Lunch On The Go";
+        NSString *strCalsStart = @"1";
+        NSString *strCalsEnd = @"200";
+        NSString *strStoreNum = @"2025";
+
+    
+        NSString *strFoodQuery = [NSString stringWithFormat:@"{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"default_field\":\"product.aisle\",\"query\":\"%@ \"}},{\"range\":{\"product.Cals\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"query_string\":{\"default_field\":\"product.store_availability.store\",\"query\":\"%@\"}}],\"must_not\":[],\"should\":[]}},\"from\":0,\"size\":10,\"sort\":[],\"facets\":{}}", strAisle, strCalsStart, strCalsEnd, strStoreNum];
+        NSLog(strFoodQuery);
+    
+
+     
+        NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.tescolabs.com/api/products/search/%@", self.tfSearchText.text]]];
+    
+    [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        
+        NSDictionary *dResults = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        
+        self.marGroceries = dResults[@"Results"];
+        NSLog(@"%@", dResults);
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tvGroceries reloadData];
+            self.vWaiting.hidden = YES;
+
+    
+    
 
     
 }
@@ -54,17 +86,18 @@
 */
 
 - (IBAction) scFoodType {
-    if (self.uscFoodType == 0) {
+    if (self.uscFoodType.selectedSegmentIndex == 0) {
         self.tvFood.hidden = NO;
         self.tvDrink.hidden = YES;
         self.tvSnack.hidden = YES;
     }
-    if (self.uscFoodType == 1) {
+    if (self.uscFoodType.selectedSegmentIndex == 1) {
+        NSLog(@"getting to here");
         self.tvFood.hidden = YES;
         self.tvDrink.hidden = NO;
         self.tvSnack.hidden = YES;
     }
-    if (self.uscFoodType == 2) {
+    if (self.uscFoodType.selectedSegmentIndex == 2) {
         self.tvFood.hidden = YES;
         self.tvDrink.hidden = YES;
         self.tvSnack.hidden = NO;
@@ -109,13 +142,24 @@
     if (tableView == self.tvFood) {
         
     TableViewCellFood *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.text = self.marFood[indexPath.row];
+    return cell;
+    }
         
-        
-        
+    if (tableView == self.tvDrink){
+        TableViewCellFood *cell2 = [tableView dequeueReusableCellWithIdentifier:@"cell2" forIndexPath:indexPath];
+        cell2.textLabel.text = self.marDrink[indexPath.row];
+        return cell2;
+    }
+    else {
+        TableViewCellFood *cell3 = [tableView dequeueReusableCellWithIdentifier:@"cell3" forIndexPath:indexPath];
+        cell3.textLabel.text = self.marSnack[indexPath.row];
+        return cell3;
+    }
     //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     //this is getting the unused cell
-    if (cell == Nil)
+    /*if (cell == Nil)
     {
         NSLog(@"Making New cell");
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier: @"cell"];
@@ -125,16 +169,14 @@
     else {
         NSLog(@"reusing a cell");
     }
-    
-    
-    
-    cell.textLabel.text = self.marFood[indexPath.row];
+     */
+
     //NSMutableDictionary *dComment = self.marFood[indexPath.row];
     //cell.textLabel.text       = dComment[@"CommentText"];
     //NSLog(@" cell.textlabel.text: %@", cell.textLabel.text);
     //cell.detailTextLabel.text = dComment[@"NameText"];
     //NSLog(@"cell.detailtetlabel.text: %@", cell.detailTextLabel.text);
-    return cell;
+
     
 }
 
