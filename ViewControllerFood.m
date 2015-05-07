@@ -89,38 +89,6 @@
 }
 
 
-//NSMutableDictionary *dlike = [[NSMutableDictionary alloc] init];
-//
-//dlike[@"UserID"] = self.dAppUser[@"_id"];
-//dlike[@"UserFirstName"] = self.dAppUser[@"FirstName"];
-//dlike[@"UserLastName"] = self.dAppUser[@"LastName"];
-//dlike[@"ImageURL"] = self.dAppUser[@"ImgURL"];
-//dlike[@"Like"] = [NSNumber numberWithBool: isLiked];
-//
-//NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/product/%@/like", self.apiEndPoint, productID]]];
-//
-//NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dlike options:NSJSONWritingPrettyPrinted error:nil];
-//
-//[theRequest setHTTPMethod:@"POST"];
-//[theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//[theRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)jsonData.length] forHTTPHeaderField:@"Content-Length"];
-//[theRequest setHTTPBody:jsonData];
-//
-//[NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//    
-//    if (completionHandler) completionHandler();
-//    
-//}];
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction) scFoodType {
     if (self.uscFoodType.selectedSegmentIndex == 0) {

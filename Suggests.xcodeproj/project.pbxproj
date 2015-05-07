@@ -21,8 +21,6 @@
 		163A08621AFBC18B00482B7B /* TableViewCellDrink.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08611AFBC18B00482B7B /* TableViewCellDrink.m */; };
 		163A08651AFBC1BE00482B7B /* TableViewCellSnacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08641AFBC1BE00482B7B /* TableViewCellSnacks.m */; };
 		163A08681AFBC1F400482B7B /* ViewControllerInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08671AFBC1F400482B7B /* ViewControllerInformation.m */; };
-		9CD4F52C1AFBF0DA002C2C2A /* FeedMe Fit Data.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4F5291AFBF0DA002C2C2A /* FeedMe Fit Data.png */; };
-		9CD4F52D1AFBF0DA002C2C2A /* Settings Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4F52A1AFBF0DA002C2C2A /* Settings Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +61,6 @@
 		163A08641AFBC1BE00482B7B /* TableViewCellSnacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellSnacks.m; sourceTree = "<group>"; };
 		163A08661AFBC1F400482B7B /* ViewControllerInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerInformation.h; sourceTree = "<group>"; };
 		163A08671AFBC1F400482B7B /* ViewControllerInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerInformation.m; sourceTree = "<group>"; };
-		9CD4F5291AFBF0DA002C2C2A /* FeedMe Fit Data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FeedMe Fit Data.png"; path = "../../../Desktop/FeedMe Fit Data.png"; sourceTree = "<group>"; };
-		9CD4F52A1AFBF0DA002C2C2A /* Settings Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings Icon.png"; path = "../../../Desktop/Settings Icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +144,6 @@
 		163A084E1AFB871000482B7B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9CD4F52A1AFBF0DA002C2C2A /* Settings Icon.png */,
-				9CD4F5291AFBF0DA002C2C2A /* FeedMe Fit Data.png */,
 			);
 			name = Images;
 			path = Suggests;
@@ -268,9 +262,7 @@
 			files = (
 				163A08341AFB80F900482B7B /* Main.storyboard in Resources */,
 				163A08391AFB80F900482B7B /* LaunchScreen.xib in Resources */,
-				9CD4F52C1AFBF0DA002C2C2A /* FeedMe Fit Data.png in Resources */,
 				163A08361AFB80F900482B7B /* Images.xcassets in Resources */,
-				9CD4F52D1AFBF0DA002C2C2A /* Settings Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
