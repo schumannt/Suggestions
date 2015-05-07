@@ -34,6 +34,15 @@
     [self.marCost addObject:@"£"];
     [self.marCost addObject:@"££"];
     [self.marCost addObject:@"£££"];
+    
+    /*
+    UINavigationController *nc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignIn"];
+    
+    ViewControllerChoose *vcc = nc.viewControllers[0];
+    vcc.delegate = self;
+    
+    [self presentViewController:nc animated:YES completion:nil];
+    */
 }
 
 
