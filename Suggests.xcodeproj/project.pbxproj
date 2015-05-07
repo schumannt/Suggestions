@@ -21,6 +21,12 @@
 		163A08621AFBC18B00482B7B /* TableViewCellDrink.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08611AFBC18B00482B7B /* TableViewCellDrink.m */; };
 		163A08651AFBC1BE00482B7B /* TableViewCellSnacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08641AFBC1BE00482B7B /* TableViewCellSnacks.m */; };
 		163A08681AFBC1F400482B7B /* ViewControllerInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08671AFBC1F400482B7B /* ViewControllerInformation.m */; };
+		9C679BB11AFC1341007BA7CC /* FeedMe Fit Data.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C679BAD1AFC1341007BA7CC /* FeedMe Fit Data.png */; };
+		9C679BB21AFC1341007BA7CC /* Logon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C679BAE1AFC1341007BA7CC /* Logon.png */; };
+		9C679BB31AFC1341007BA7CC /* Question Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C679BAF1AFC1341007BA7CC /* Question Icon.png */; };
+		9C679BB41AFC1341007BA7CC /* Settings Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C679BB01AFC1341007BA7CC /* Settings Icon.png */; };
+		9C679BBB1AFC16A7007BA7CC /* ViewControllerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */; };
+		9C679BBE1AFC16E3007BA7CC /* TableViewCellSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C679BBD1AFC16E3007BA7CC /* TableViewCellSettings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,14 @@
 		163A08641AFBC1BE00482B7B /* TableViewCellSnacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellSnacks.m; sourceTree = "<group>"; };
 		163A08661AFBC1F400482B7B /* ViewControllerInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerInformation.h; sourceTree = "<group>"; };
 		163A08671AFBC1F400482B7B /* ViewControllerInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerInformation.m; sourceTree = "<group>"; };
+		9C679BAD1AFC1341007BA7CC /* FeedMe Fit Data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FeedMe Fit Data.png"; path = "../../../Desktop/FeedMe Fit Data.png"; sourceTree = "<group>"; };
+		9C679BAE1AFC1341007BA7CC /* Logon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logon.png; path = ../../../Desktop/Logon.png; sourceTree = "<group>"; };
+		9C679BAF1AFC1341007BA7CC /* Question Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Question Icon.png"; path = "../../../Desktop/Question Icon.png"; sourceTree = "<group>"; };
+		9C679BB01AFC1341007BA7CC /* Settings Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings Icon.png"; path = "../../../Desktop/Settings Icon.png"; sourceTree = "<group>"; };
+		9C679BB91AFC16A7007BA7CC /* ViewControllerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSettings.h; sourceTree = "<group>"; };
+		9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSettings.m; sourceTree = "<group>"; };
+		9C679BBC1AFC16E3007BA7CC /* TableViewCellSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellSettings.h; sourceTree = "<group>"; };
+		9C679BBD1AFC16E3007BA7CC /* TableViewCellSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellSettings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +101,7 @@
 				163A08321AFB80F900482B7B /* Main.storyboard */,
 				163A08571AFB9D6F00482B7B /* Home */,
 				163A08591AFB9DF900482B7B /* Tab 1 */,
+				9C679BB51AFC1572007BA7CC /* Tab 2 */,
 				163A084E1AFB871000482B7B /* Images */,
 				163A08271AFB80F900482B7B /* Suggests */,
 				163A08411AFB80F900482B7B /* SuggestsTests */,
@@ -144,6 +159,10 @@
 		163A084E1AFB871000482B7B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9C679BAD1AFC1341007BA7CC /* FeedMe Fit Data.png */,
+				9C679BAE1AFC1341007BA7CC /* Logon.png */,
+				9C679BAF1AFC1341007BA7CC /* Question Icon.png */,
+				9C679BB01AFC1341007BA7CC /* Settings Icon.png */,
 			);
 			name = Images;
 			path = Suggests;
@@ -178,6 +197,17 @@
 				163A08671AFBC1F400482B7B /* ViewControllerInformation.m */,
 			);
 			name = "Tab 1";
+			sourceTree = "<group>";
+		};
+		9C679BB51AFC1572007BA7CC /* Tab 2 */ = {
+			isa = PBXGroup;
+			children = (
+				9C679BB91AFC16A7007BA7CC /* ViewControllerSettings.h */,
+				9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */,
+				9C679BBC1AFC16E3007BA7CC /* TableViewCellSettings.h */,
+				9C679BBD1AFC16E3007BA7CC /* TableViewCellSettings.m */,
+			);
+			name = "Tab 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				163A08341AFB80F900482B7B /* Main.storyboard in Resources */,
+				9C679BB11AFC1341007BA7CC /* FeedMe Fit Data.png in Resources */,
 				163A08391AFB80F900482B7B /* LaunchScreen.xib in Resources */,
+				9C679BB31AFC1341007BA7CC /* Question Icon.png in Resources */,
+				9C679BB21AFC1341007BA7CC /* Logon.png in Resources */,
 				163A08361AFB80F900482B7B /* Images.xcassets in Resources */,
+				9C679BB41AFC1341007BA7CC /* Settings Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +318,13 @@
 				163A08311AFB80F900482B7B /* ViewControllerSignIn.m in Sources */,
 				163A08621AFBC18B00482B7B /* TableViewCellDrink.m in Sources */,
 				163A08561AFB9CD300482B7B /* ViewControllerSignUpDetails.m in Sources */,
+				9C679BBB1AFC16A7007BA7CC /* ViewControllerSettings.m in Sources */,
 				163A085C1AFBB7B100482B7B /* ViewControllerFood.m in Sources */,
 				163A08651AFBC1BE00482B7B /* TableViewCellSnacks.m in Sources */,
 				163A08531AFB93B000482B7B /* ViewControllerChoose.m in Sources */,
 				163A08681AFBC1F400482B7B /* ViewControllerInformation.m in Sources */,
 				163A082E1AFB80F900482B7B /* AppDelegate.m in Sources */,
+				9C679BBE1AFC16E3007BA7CC /* TableViewCellSettings.m in Sources */,
 				163A082B1AFB80F900482B7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

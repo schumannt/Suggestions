@@ -20,7 +20,7 @@
 @property (nonatomic, strong)          NSMutableArray *marFood;
 @property (nonatomic, strong)          NSMutableArray *marDrink;
 @property (nonatomic, strong)          NSMutableArray *marSnack;
-@property (nonatomic, strong)          NSMutableDictionary *dFoodList
+@property (nonatomic, strong)          NSMutableDictionary *dFoodList;
 
 
 - (IBAction) scFoodType;
