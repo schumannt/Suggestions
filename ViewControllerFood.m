@@ -36,44 +36,69 @@
     [self.marSnack addObject:@"Boost"];
     
     
-    
-        //NSMutableDictionary *dFood = [[NSMutableDictionary alloc] init];
-    
-        NSString *strAisle = @"Lunch On The Go";
-        NSString *strCalsStart = @"1";
-        NSString *strCalsEnd = @"200";
-        NSString *strStoreNum = @"2025";
-
-    
-        NSString *strFoodQuery = [NSString stringWithFormat:@"{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"default_field\":\"product.aisle\",\"query\":\"%@ \"}},{\"range\":{\"product.Cals\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"query_string\":{\"default_field\":\"product.store_availability.store\",\"query\":\"%@\"}}],\"must_not\":[],\"should\":[]}},\"from\":0,\"size\":10,\"sort\":[],\"facets\":{}}", strAisle, strCalsStart, strCalsEnd, strStoreNum];
-        NSLog(strFoodQuery);
-    
-
-     
-        NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.tescolabs.com/api/products/search/%@", self.tfSearchText.text]]];
-    
-    [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        
-        NSDictionary *dResults = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-        
-        self.marGroceries = dResults[@"Results"];
-        NSLog(@"%@", dResults);
-        
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tvGroceries reloadData];
-            self.vWaiting.hidden = YES;
-
-    
-    
-
-    
+    [self getFoodChoices];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
+
+- (void)getFoodChoices {
+    //NSMutableDictionary *dFood = [[NSMutableDictionary alloc] init];
+    
+    NSString *strAisle = @"Lunch On The Go";
+    NSString *strCalsStart = @"1";
+    NSString *strCalsEnd = @"200";
+    NSString *strStoreNum = @"2025";
+    
+    
+    NSString *strFoodQuery = [NSString stringWithFormat:@"{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"default_field\":\"product.aisle\",\"query\":\"%@ \"}},{\"range\":{\"product.Cals\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"query_string\":{\"default_field\":\"product.store_availability.store\",\"query\":\"%@\"}}],\"must_not\":[],\"should\":[]}},\"from\":0,\"size\":10,\"sort\":[],\"facets\":{}}", strAisle, strCalsStart, strCalsEnd, strStoreNum];
+    NSLog(strFoodQuery);
+
+    NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:9200/ghs.healthAPI/_search"]];
+    
+    NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:9200/ghs.healthAPI/_search"]];
+
+    [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
+    
+    
+        NSDictionary *dResults = [NSJSONSerialization JSONObjectWithData:strFoodQuery options:NSJSONReadingMutableLeaves error:nil];
+        
+        //        self.marGroceries = dResults[@"Results"];
+        NSLog(@"%@", dResults);
+        
+        
+        //        dispatch_async(dispatch_get_main_queue(), ^{
+        //            [self.tvGroceries reloadData];
+        //            self.vWaiting.hidden = YES;
+    }];
+}
+
+
+NSMutableDictionary *dlike = [[NSMutableDictionary alloc] init];
+
+dlike[@"UserID"] = self.dAppUser[@"_id"];
+dlike[@"UserFirstName"] = self.dAppUser[@"FirstName"];
+dlike[@"UserLastName"] = self.dAppUser[@"LastName"];
+dlike[@"ImageURL"] = self.dAppUser[@"ImgURL"];
+dlike[@"Like"] = [NSNumber numberWithBool: isLiked];
+
+NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/product/%@/like", self.apiEndPoint, productID]]];
+
+NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dlike options:NSJSONWritingPrettyPrinted error:nil];
+
+[theRequest setHTTPMethod:@"POST"];
+[theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+[theRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)jsonData.length] forHTTPHeaderField:@"Content-Length"];
+[theRequest setHTTPBody:jsonData];
+
+[NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    
+    if (completionHandler) completionHandler();
+    
+}];
 
 /*
 #pragma mark - Navigation
