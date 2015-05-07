@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="g3o-Po-nHP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="g3o-Po-nHP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -129,7 +129,7 @@
         <scene sceneID="KCe-JT-9UI">
             <objects>
                 <navigationController id="tDE-hI-blI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Suggestions" image="Like.png" id="MqI-K1-Y1D"/>
+                    <tabBarItem key="tabBarItem" title="Suggestions" image="Settings Icon.png" id="MqI-K1-Y1D"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nbG-jo-Q6g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -155,7 +155,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO8-kW-pQZ">
-                                <rect key="frame" x="139" y="466" width="43" height="30"/>
+                                <rect key="frame" x="139" y="481" width="43" height="30"/>
                                 <state key="normal" title="Select">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -164,14 +164,62 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4RB-L5-nIf">
-                                <rect key="frame" x="0.0" y="236" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="279" width="320" height="146"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kM8-Uz-upL" id="rjG-BC-7nW"/>
+                                    <outlet property="delegate" destination="kM8-Uz-upL" id="leN-3Q-vUO"/>
+                                </connections>
                             </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FeedMe Fit Data.png" translatesAutoresizingMaskIntoConstraints="NO" id="ANU-9H-Inh">
+                                <rect key="frame" x="16" y="156" width="288" height="105"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi Kris, Welcome to Tesco Hatfield Extra" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vl-u4-r6z">
+                                <rect key="frame" x="6" y="78" width="309" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcV-Wb-K94">
+                                <rect key="frame" x="51" y="205" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Burnt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4T-nM-uTg">
+                                <rect key="frame" x="216" y="205" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9st-aT-KGa">
+                                <rect key="frame" x="16" y="446" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygW-qt-1Wt">
+                                <rect key="frame" x="249" y="446" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aV0-Xh-lr3">
+                                <rect key="frame" x="134" y="446" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NeP-bj-ZKW"/>
                     <connections>
-                        <outlet property="picker" destination="4RB-L5-nIf" id="b7B-nu-RlQ"/>
+                        <outlet property="lblBurnt" destination="H4T-nM-uTg" id="ban-wc-Fga"/>
+                        <outlet property="lblCostChoice" destination="ygW-qt-1Wt" id="Mkh-YS-Kns"/>
+                        <outlet property="lblMealChoice" destination="9st-aT-KGa" id="qEe-J9-7UR"/>
+                        <outlet property="lblRemaining" destination="qcV-Wb-K94" id="AGE-i6-VHL"/>
+                        <outlet property="lblTypeChoice" destination="aV0-Xh-lr3" id="0eW-2i-TCl"/>
+                        <outlet property="picker" destination="4RB-L5-nIf" id="6VI-Vy-70Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1i-Ff-uI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,7 +362,7 @@
         <scene sceneID="9CR-2o-pmX">
             <objects>
                 <navigationController id="doh-aG-71g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="Like.png" id="9ao-4m-B6A"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings Icon.png" id="9ao-4m-B6A"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9FI-2a-QvM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -348,7 +396,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Like.png" width="32" height="32"/>
+        <image name="FeedMe Fit Data.png" width="504" height="404"/>
+        <image name="Settings Icon.png" width="49" height="45"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
