@@ -280,10 +280,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ivProductImage" destination="deE-bp-yNL" id="Vwj-Qj-kpV"/>
-                                            <outlet property="ivTickBox" destination="ERh-oG-9WY" id="pnL-AA-yQf"/>
-                                            <outlet property="lblProductKcal" destination="kQj-JS-my6" id="4Qg-YS-Da0"/>
-                                            <outlet property="lblProductName" destination="IlQ-29-ZPy" id="9ec-Np-DW9"/>
-                                            <outlet property="lblProductPrice" destination="EAh-K0-7vj" id="VCm-1Q-TCb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

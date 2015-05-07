@@ -15,6 +15,11 @@
 
 @implementation ViewControllerFood
 
+- (void) viewWillAppear:(BOOL)animated {
+    [self getFoodChoices];
+    [self.tvFood reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -77,11 +82,11 @@
 //        NSLog(@"%@", dResults);
         
         NSDictionary *dHits = [dResults objectForKey:@"hits"];
-        NSDictionary *dFoodList = [dHits objectForKey:@"hits"];
-
+        //NSMutableArray *marFoodList = [dHits objectForKey:@"hits"];
+        self.marFoodList = [dHits objectForKey:@"hits"];
         
-        NSLog(@"%@", dFoodList);
-        
+        NSLog(@"need this one to change!%d", self.marFoodList.count);
+            [self.tvFood reloadData];
         //        dispatch_async(dispatch_get_main_queue(), ^{
         //            [self.tvGroceries reloadData];
         //            self.vWaiting.hidden = YES;
@@ -122,7 +127,9 @@
     
     
     if (tableView == self.tvFood ) {
-        return self.marFood.count;
+        NSLog(@"arrrrrrrrrrFoodlist %d", self.marFoodList.count);
+        return self.marFoodList.count;
+        
     }
     else if (tableView == self.tvDrink){
         return self.marDrink.count;
@@ -147,10 +154,18 @@
     if (tableView == self.tvFood) {
         
     TableViewCellFood *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = self.marFood[indexPath.row];
+        
+        NSMutableDictionary *dOneProduct = self.marFoodList[indexPath.row];
+        NSMutableDictionary *dDetailOneProduct = dOneProduct[@"_Source"];
+
+        cell.lblProductName.text = dDetailOneProduct[@"name"];
+        cell.lblProductKcal.text = dDetailOneProduct[@"Cals"];
+        cell.lblProductPrice.text = dDetailOneProduct[@"normalPrice"];
+        cell.ivProductImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:dDetailOneProduct[@"image"]]]];
+        NSLog(@"cell label product name %@", cell.lblProductName.text);
     return cell;
     }
-        
+    
     if (tableView == self.tvDrink){
         TableViewCellFood *cell2 = [tableView dequeueReusableCellWithIdentifier:@"cell2" forIndexPath:indexPath];
         cell2.textLabel.text = self.marDrink[indexPath.row];
