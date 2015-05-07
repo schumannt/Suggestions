@@ -32,24 +32,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C3-pk-fcx">
-                                <rect key="frame" x="137" y="376" width="48" height="30"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="BtnSignIn" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5n8-Wp-fUZ"/>
-                                    <segue destination="2lN-Cz-ASA" kind="push" id="7XM-Vw-p60"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logon.png" translatesAutoresizingMaskIntoConstraints="NO" id="EPS-Zd-sVi">
+                                <rect key="frame" x="41" y="96" width="240" height="406"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu2-t6-TCZ">
-                                <rect key="frame" x="133" y="437" width="55" height="30"/>
-                                <state key="normal" title="Sign Up">
+                                <rect key="frame" x="112" y="469" width="94" height="33"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="BtnSignUp" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qY2-p9-Vmc"/>
                                     <segue destination="9ZU-Rl-14c" kind="push" id="ZyM-xj-wVh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C3-pk-fcx">
+                                <rect key="frame" x="112" y="415" width="94" height="34"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnSignIn" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5n8-Wp-fUZ"/>
+                                    <segue destination="2lN-Cz-ASA" kind="push" id="7XM-Vw-p60"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,7 +132,7 @@
         <scene sceneID="KCe-JT-9UI">
             <objects>
                 <navigationController id="tDE-hI-blI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Suggestions" image="Settings Icon.png" id="MqI-K1-Y1D"/>
+                    <tabBarItem key="tabBarItem" title="Suggestions" image="Question Icon.png" id="MqI-K1-Y1D"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nbG-jo-Q6g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -180,13 +183,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcV-Wb-K94">
-                                <rect key="frame" x="51" y="205" width="82" height="21"/>
+                                <rect key="frame" x="51" y="220" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Burnt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4T-nM-uTg">
-                                <rect key="frame" x="216" y="205" width="43" height="21"/>
+                                <rect key="frame" x="215" y="220" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -396,8 +399,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FeedMe Fit Data.png" width="504" height="404"/>
-        <image name="Settings Icon.png" width="49" height="45"/>
+        <image name="FeedMe Fit Data.png" width="504" height="154"/>
+        <image name="Logon.png" width="310" height="527"/>
+        <image name="Question Icon.png" width="35" height="40"/>
+        <image name="Settings Icon.png" width="36" height="36"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
