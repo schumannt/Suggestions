@@ -70,9 +70,9 @@
         strAisle = @"Crisps & Snacks";
         if (self.rowSelectedHealth  == 0){
             strCalsStart = @"1";
-            strCalsEnd = @"300";
+            strCalsEnd = @"200";
         } else {
-            strCalsStart = @"301";
+            strCalsStart = @"201";
             strCalsEnd = @"600";
         }
         if (self.rowSelectedCost  == 0){
@@ -102,6 +102,25 @@
             strPriceEnd = @"4";
         } else{
             strPriceStart = @"4";
+            strPriceEnd = @"10";
+        }
+    } else if (self.rowSelectedMeal  == 4){
+        strAisle = @"Sports & Energy";
+        if (self.rowSelectedHealth  == 0){
+            strCalsStart = @"1";
+            strCalsEnd = @"50";
+        } else {
+            strCalsStart = @"51";
+            strCalsEnd = @"1000";
+        }
+        if (self.rowSelectedCost  == 0){
+            strPriceStart = @"0";
+            strPriceEnd = @"0.75";
+        } else if (self.rowSelectedCost  == 1){
+            strPriceStart = @"0.76";
+            strPriceEnd = @"1";
+        } else{
+            strPriceStart = @"1";
             strPriceEnd = @"10";
         }
     } else {
@@ -230,12 +249,13 @@
         NSMutableDictionary *dOneProduct = self.marFoodList[indexPath.row];
 
         NSMutableDictionary *dDetailOneProduct = dOneProduct[@"_source"];
+        NSString *newImageURL = [dDetailOneProduct[@"image"] stringByReplacingOccurrencesOfString:@"\\" withString:@"/"];
         //NSLog(@"dDetailOneProduct %@", dDetailOneProduct);
         cell.lblProductName.text = dDetailOneProduct[@"name"];
 
         cell.lblProductPrice.text = [NSString stringWithFormat:@"£%@", dDetailOneProduct[@"normalPrice"]];
         cell.lblProductKcal.text = [NSString stringWithFormat:@"%@", dDetailOneProduct[@"Cals"]];
-        cell.ivProductImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:dDetailOneProduct[@"image"]]]];
+        cell.ivProductImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:newImageURL]]];
         
         //NSLog(@"image string!!! %@", dDetailOneProduct[@"image"]);
     return cell;

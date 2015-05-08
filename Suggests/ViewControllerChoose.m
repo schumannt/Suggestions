@@ -29,6 +29,7 @@
     [self.marMeal addObject:@"Lunch"];
     [self.marMeal addObject:@"Snacks"];
     [self.marMeal addObject:@"Dinner"];
+    [self.marMeal addObject:@"Drinks"];
     
     self.marType = [[NSMutableArray alloc] init];
     [self.marType addObject:@"Healthy"];

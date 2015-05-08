@@ -13,6 +13,10 @@
 @property (nonatomic, weak) IBOutlet UILabel *lblDescription;
 @property (nonatomic, weak) IBOutlet UILabel *lblPrice;
 @property (nonatomic, weak) IBOutlet UILabel *lblCalorieCount;
+@property (nonatomic, weak) IBOutlet UILabel *lblFat;
+@property (nonatomic, weak) IBOutlet UILabel *lblSugar;
+@property (nonatomic, weak) IBOutlet UILabel *lblSalt;
+@property (nonatomic, weak) IBOutlet UILabel *lblLocation;
 @property (nonatomic, weak) IBOutlet UIImageView *ivProductImageDetail;
 
 @property (nonatomic, strong) NSMutableDictionary *dProductDetail;

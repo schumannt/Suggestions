@@ -20,11 +20,29 @@
     // Do any additional setup after loading the view.
     
     NSMutableDictionary *dProductDetailAfterSource = self.dProductDetail[@"_source"];
+    
+    
+    NSString *newImageURL = [dProductDetailAfterSource[@"image"] stringByReplacingOccurrencesOfString:@"\\" withString:@"/"];
+    NSString *biggerImageURL = [newImageURL stringByReplacingOccurrencesOfString:@"90" withString:@"225"];
     //self.lblCalorieCount.text = dProductDetailAfterSource[@"Cals"];
     self.lblDescription.text= [NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"name"]];
     self.lblCalorieCount.text= [NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Cals"]];
     self.lblPrice.text= [NSString stringWithFormat:@"£%@", dProductDetailAfterSource[@"normalPrice"]];
+    self.ivProductImageDetail.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:biggerImageURL]]];
+    self.lblFat.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Fat"]];
+    self.lblSalt.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Salt"]];
+    self.lblSugar.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Sugar"]];
+    
+    
+//    NSMutableArray *marLocation = [[NSMutableArray alloc] init];
+//    [marLocation addObject:@"Aisle 4, on right];
+//    [marLocation addObject:@"Aisle 3, half way"];
+//    [marLocation addObject:@"Aisle 11, on left"];
+//    [marLocation addObject:@"Aisle 1, at the end"];
+//    [marLocation addObject:@"Aisle 2, half way"];
+    
     //NSLog(@"self.dproductdetail cal %@", self.dProductDetail[@"_source"]);
+    
     
 }
 
