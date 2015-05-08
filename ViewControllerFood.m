@@ -39,28 +39,100 @@
     
     ViewControllerChoose *vcc = [self.storyboard instantiateViewControllerWithIdentifier:@"Choose"];
     NSString *strAisle = @"Lunch On The Go";
-    if (self.rowSelectedMeal  == 1){
-        strAisle = @"Lunch On The Go";
-        NSLog(@"straisl");
-    } else if (self.rowSelectedMeal  == 2){
-        strAisle = @"Crisps & Snacks";
-    } else if (self.rowSelectedMeal  == 3){
-        strAisle = @"Lunch On The Go";
-    } else {
-        strAisle = @"Breakfast On The Go";
-    }
-
-    
-    
     
     NSString *strCalsStart = @"1";
-    NSString *strCalsEnd = @"200";
+    NSString *strCalsEnd = @"300";
+    
+    NSString *strPriceStart = @"1";
+    NSString *strPriceEnd = @"2";
+    
+    if (self.rowSelectedMeal  == 1){
+        strAisle = @"Lunch On The Go";
+        if (self.rowSelectedHealth  == 0){
+            strCalsStart = @"1";
+            strCalsEnd = @"400";
+        } else {
+            strCalsStart = @"401";
+            strCalsEnd = @"1000";
+        }
+        if (self.rowSelectedCost  == 0){
+            strPriceStart = @"0";
+            strPriceEnd = @"2";
+        } else if (self.rowSelectedCost  == 1){
+            strPriceStart = @"2";
+            strPriceEnd = @"4";
+        } else{
+            strPriceStart = @"4";
+            strPriceEnd = @"10";
+        }
+    } else if (self.rowSelectedMeal  == 2){
+        strAisle = @"Crisps & Snacks";
+        if (self.rowSelectedHealth  == 0){
+            strCalsStart = @"1";
+            strCalsEnd = @"300";
+        } else {
+            strCalsStart = @"301";
+            strCalsEnd = @"600";
+        }
+        if (self.rowSelectedCost  == 0){
+            strPriceStart = @"0";
+            strPriceEnd = @"1";
+        } else if (self.rowSelectedCost  == 1){
+            strPriceStart = @"1";
+            strPriceEnd = @"2";
+        } else{
+            strPriceStart = @"2";
+            strPriceEnd = @"10";
+        }
+    } else if (self.rowSelectedMeal  == 3){
+        strAisle = @"Lunch On The Go";
+        if (self.rowSelectedHealth  == 0){
+            strCalsStart = @"1";
+            strCalsEnd = @"600";
+        } else {
+            strCalsStart = @"601";
+            strCalsEnd = @"1000";
+        }
+        if (self.rowSelectedCost  == 0){
+            strPriceStart = @"0";
+            strPriceEnd = @"2";
+        } else if (self.rowSelectedCost  == 1){
+            strPriceStart = @"2";
+            strPriceEnd = @"4";
+        } else{
+            strPriceStart = @"4";
+            strPriceEnd = @"10";
+        }
+    } else {
+        strAisle = @"Breakfast On The Go";
+        if (self.rowSelectedHealth  == 0){
+            strCalsStart = @"1";
+            strCalsEnd = @"700";
+        } else {
+            strCalsStart = @"701";
+            strCalsEnd = @"1200";
+        }
+        if (self.rowSelectedCost  == 0){
+            strPriceStart = @"0";
+            strPriceEnd = @"2";
+        } else if (self.rowSelectedCost  == 1){
+            strPriceStart = @"2";
+            strPriceEnd = @"4";
+        } else{
+            strPriceStart = @"4";
+            strPriceEnd = @"10";
+        }
+    }
+    
     NSString *strStoreNum = @"2025";
     NSLog(@"this is printing str aisle, %@", strAisle);
     NSLog(@"this is printing vcc.lblmealchoice %@", vcc.lblMealChoice.text);
     
-    NSString *strFoodQuery = [NSString stringWithFormat:@"{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"default_field\":\"product.aisle\",\"query\":\"%@ \"}},{\"range\":{\"product.Cals\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"query_string\":{\"default_field\":\"product.store_availability.store\",\"query\":\"%@\"}}],\"must_not\":[],\"should\":[]}},\"from\":0,\"size\":10,\"sort\":[],\"facets\":{}}", strAisle, strCalsStart, strCalsEnd, strStoreNum];
-        NSLog(strFoodQuery);
+//    NSString *strFoodQuery = [NSString stringWithFormat:@"{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"default_field\":\"product.aisle\",\"query\":\"%@ \"}},{\"range\":{\"product.Cals\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"query_string\":{\"default_field\":\"product.store_availability.store\",\"query\":\"%@\"}}],\"must_not\":[],\"should\":[]}},\"from\":0,\"size\":10,\"sort\":[],\"facets\":{}}", strAisle, strPriceStart,strPriceEnd,strCalsStart, strCalsEnd, strStoreNum];
+//        NSLog(strFoodQuery);
+    
+     NSString *strFoodQuery = [NSString stringWithFormat:@"{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"default_field\":\"product.aisle\",\"query\":\"%@\"}},{\"range\":{\"product.Cals\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"range\":{\"product.normalPrice\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"query_string\":{\"default_field\":\"product.store_availability.store\",\"query\":\"%@\"}}],\"must_not\":[],\"should\":[]}},\"from\":0,\"size\":10,\"sort\":[],\"facets\":{}}", strAisle, strCalsStart, strCalsEnd, strPriceStart,strPriceEnd,strStoreNum];
+    NSLog(strFoodQuery);
     
     NSData* cData = [strFoodQuery dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -84,7 +156,7 @@
         NSDictionary *dHits = [dResults objectForKey:@"hits"];
         //NSMutableArray *marFoodList = [dHits objectForKey:@"hits"];
         self.marFoodList = [dHits objectForKey:@"hits"];
-        
+        NSLog(@"%@",self.marFoodList);
         //NSLog(@"need this one to change!%d", self.marFoodList.count);
         [self.tvFood reloadData];
         //        dispatch_async(dispatch_get_main_queue(), ^{
