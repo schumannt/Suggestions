@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"dictionary int he information paneeeeeee %@", self.dProductDetail);
     // Do any additional setup after loading the view.
+    
+    NSMutableDictionary *dProductDetailAfterSource = self.dProductDetail[@"_source"];
+    //self.lblCalorieCount.text = dProductDetailAfterSource[@"Cals"];
+    self.lblDescription.text= [NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"name"]];
+    self.lblCalorieCount.text= [NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Cals"]];
+    self.lblPrice.text= [NSString stringWithFormat:@"£%@", dProductDetailAfterSource[@"normalPrice"]];
+    //NSLog(@"self.dproductdetail cal %@", self.dProductDetail[@"_source"]);
+    
 }
 
 - (void)didReceiveMemoryWarning {

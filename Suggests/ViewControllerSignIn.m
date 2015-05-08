@@ -32,6 +32,7 @@
 */
 
 - (IBAction) BtnSignIn {
+    [ self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

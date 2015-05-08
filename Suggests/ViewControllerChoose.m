@@ -8,6 +8,7 @@
 
 #import "ViewControllerChoose.h"
 #import "ViewControllerFood.h"
+#import "ViewControllerSignIn.h"
 
 @interface ViewControllerChoose ()
 
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ViewControllerSignIn *vcs = [self.storyboard instantiateViewControllerWithIdentifier:@"SignIn"];
+    [self presentViewController:vcs animated:NO completion:nil];
     
     // Initialize Data
     

@@ -9,6 +9,7 @@
 #import "ViewControllerFood.h"
 #import "TableViewCellFood.h"
 #import "ViewControllerChoose.h"
+#import "ViewControllerInformation.h"
 
 @interface ViewControllerFood ()
 
@@ -276,6 +277,26 @@
 
 
 
+
+
+
+
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"segueToDetailView"]) {
+        
+        ViewControllerInformation *vc = segue.destinationViewController;
+        int intSelectedRow = [self.tvFood indexPathForSelectedRow].row;
+        
+        TableViewCellFood *cell = (TableViewCellFood *)[self.tvFood cellForRowAtIndexPath:[self.tvFood indexPathForSelectedRow]];
+        
+        vc.dProductDetail= self.marFoodList[intSelectedRow];
+        //vc.imgProductImage = cell.ivProductImage.image;
+        
+    }
+    
+}
 
 
 
