@@ -8,6 +8,7 @@
 
 #import "ViewControllerFood.h"
 #import "TableViewCellFood.h"
+#import "ViewControllerChoose.h"
 
 @interface ViewControllerFood ()
 
@@ -22,24 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    /*self.marFood = [[NSMutableArray alloc]init];
-    [self.marFood addObject:@"Chicken Sandwich"];
-    [self.marFood addObject:@"Cheese and tomato Sandwich"];
-    [self.marFood addObject:@"Pesto Salad"];
-    
-    self.marDrink = [[NSMutableArray alloc]init];
-    [self.marDrink addObject:@"Diet Coke"];
-    [self.marDrink addObject:@"Iron Bru"];
-    [self.marDrink addObject:@"Vodka"];
-    [self.marDrink addObject:@"Lemonade"];
-    
-    
-    self.marSnack = [[NSMutableArray alloc]init];
-    [self.marSnack addObject:@"Kit Kat"];
-    [self.marSnack addObject:@"Boost"];
-    */
+
     
     [self getFoodChoices];
 }
@@ -53,15 +37,31 @@
 - (void)getFoodChoices {
     //NSMutableDictionary *dFood = [[NSMutableDictionary alloc] init];
     
-    NSString *strAisle = @"Lunch On The Go";
+    ViewControllerChoose *vcc = [self.storyboard instantiateViewControllerWithIdentifier:@"Choose"];
+//    NSString *strAisle = @"Lunch On The Go";
+//    if ([vcc.lblMealChoice.text  isEqual: @"Selected Row 1"]){
+//        strAisle = @"Lunch On The Go";
+//        NSLog(@"straisl");
+//    } else if ([vcc.lblMealChoice.text  isEqual: @"Selected Row 2"]){
+//        strAisle = @"Desserts & Snacks On The Go";
+//    } else if ([vcc.lblMealChoice.text  isEqual: @"Selected Row 3"]){
+//        strAisle = @"Lunch On The Go";
+//    } else {
+//        strAisle = @"Breakfast On The Go";
+//    }
+
+    
+    
+    
     NSString *strCalsStart = @"1";
     NSString *strCalsEnd = @"200";
     NSString *strStoreNum = @"2025";
-    
+    NSLog(@"this is printing str aisle, %@", strAisle);
+    NSLog(@"this is printing vcc.lblmealchoice %@", vcc.lblMealChoice.text);
     
     NSString *strFoodQuery = [NSString stringWithFormat:@"{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"default_field\":\"product.aisle\",\"query\":\"%@ \"}},{\"range\":{\"product.Cals\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"query_string\":{\"default_field\":\"product.store_availability.store\",\"query\":\"%@\"}}],\"must_not\":[],\"should\":[]}},\"from\":0,\"size\":10,\"sort\":[],\"facets\":{}}", strAisle, strCalsStart, strCalsEnd, strStoreNum];
-//    NSLog(strFoodQuery);
-
+    //    NSLog(strFoodQuery);
+    
     NSData* cData = [strFoodQuery dataUsingEncoding:NSUTF8StringEncoding];
     
     NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:9200/ghs.healthAPI/_search"]];
@@ -71,28 +71,27 @@
     
     [theRequest setHTTPBody:cData];
     
-//    NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:9200/ghs.healthAPI/_search"]];
-
+    //    NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:9200/ghs.healthAPI/_search"]];
+    
     [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
-    
-    
+        
+        
         NSDictionary *dResults = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
         
         //        self.marGroceries = dResults[@"Results"];
-//        NSLog(@"%@", dResults);
+        //        NSLog(@"%@", dResults);
         
         NSDictionary *dHits = [dResults objectForKey:@"hits"];
         //NSMutableArray *marFoodList = [dHits objectForKey:@"hits"];
         self.marFoodList = [dHits objectForKey:@"hits"];
         
-        NSLog(@"need this one to change!%d", self.marFoodList.count);
-            [self.tvFood reloadData];
+        //NSLog(@"need this one to change!%d", self.marFoodList.count);
+        [self.tvFood reloadData];
         //        dispatch_async(dispatch_get_main_queue(), ^{
         //            [self.tvGroceries reloadData];
         //            self.vWaiting.hidden = YES;
     }];
 }
-
 
 
 - (IBAction) scFoodType {
@@ -102,7 +101,7 @@
         self.tvSnack.hidden = YES;
     }
     if (self.uscFoodType.selectedSegmentIndex == 1) {
-        NSLog(@"getting to here");
+       // NSLog(@"getting to here");
         self.tvFood.hidden = YES;
         self.tvDrink.hidden = NO;
         self.tvSnack.hidden = YES;
@@ -127,7 +126,7 @@
     
     
     if (tableView == self.tvFood ) {
-        NSLog(@"arrrrrrrrrrFoodlist %d", self.marFoodList.count);
+        //NSLog(@"arrrrrrrrrrFoodlist %d", self.marFoodList.count);
         return self.marFoodList.count;
         
     }
@@ -165,7 +164,7 @@
         cell.lblProductKcal.text = [NSString stringWithFormat:@"%@", dDetailOneProduct[@"Cals"]];
         cell.ivProductImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:dDetailOneProduct[@"image"]]]];
         
-        NSLog(@"image string!!! %@", dDetailOneProduct[@"image"]);
+        //NSLog(@"image string!!! %@", dDetailOneProduct[@"image"]);
     return cell;
     }
     

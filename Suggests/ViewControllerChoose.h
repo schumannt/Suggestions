@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSMutableArray *marMeal;
 @property (nonatomic, strong) NSMutableArray *marType;
 @property (nonatomic, strong) NSMutableArray *marCost;
+@property (nonatomic) NSInteger *firstComponentRow;
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
 @property (strong, nonatomic) IBOutlet UILabel *lblMealChoice;
