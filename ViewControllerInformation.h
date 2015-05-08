@@ -27,6 +27,4 @@
 - ( IBAction)stepperValueChanged:( UIStepper *)sender;
 - ( IBAction) BtnFitBit;
 
-@property (nonatomic, weak) IBOutlet UIView         *vProduct;
-
 @end
