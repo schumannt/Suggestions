@@ -22,6 +22,9 @@
 @property (nonatomic, strong)          NSMutableArray *marSnack;
 @property (nonatomic, strong)          NSMutableArray *marFoodList;
 
+@property (assign) int rowSelectedMeal;
+@property (assign) int rowSelectedHealth;
+@property (assign) int rowSelectedCost;
 
 - (IBAction) scFoodType;
 

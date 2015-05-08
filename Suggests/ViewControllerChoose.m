@@ -7,6 +7,7 @@
 //
 
 #import "ViewControllerChoose.h"
+#import "ViewControllerFood.h"
 
 @interface ViewControllerChoose ()
 
@@ -77,6 +78,7 @@
 }
 
 
+
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     NSLog(@"Selected Row %ld", (long)row);
@@ -123,7 +125,13 @@
     }
 }
 
-- (IBAction) BtnSelect {
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    ViewControllerFood *vcf = (ViewControllerFood *)segue.destinationViewController;
+    
+    vcf.rowSelectedMeal   = (int)[self.picker selectedRowInComponent:0];
+    vcf.rowSelectedHealth = (int)[self.picker selectedRowInComponent:1];
+    vcf.rowSelectedCost   = (int)[self.picker selectedRowInComponent:2];
     
 }
 

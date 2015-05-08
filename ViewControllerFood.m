@@ -38,17 +38,17 @@
     //NSMutableDictionary *dFood = [[NSMutableDictionary alloc] init];
     
     ViewControllerChoose *vcc = [self.storyboard instantiateViewControllerWithIdentifier:@"Choose"];
-//    NSString *strAisle = @"Lunch On The Go";
-//    if ([vcc.lblMealChoice.text  isEqual: @"Selected Row 1"]){
-//        strAisle = @"Lunch On The Go";
-//        NSLog(@"straisl");
-//    } else if ([vcc.lblMealChoice.text  isEqual: @"Selected Row 2"]){
-//        strAisle = @"Desserts & Snacks On The Go";
-//    } else if ([vcc.lblMealChoice.text  isEqual: @"Selected Row 3"]){
-//        strAisle = @"Lunch On The Go";
-//    } else {
-//        strAisle = @"Breakfast On The Go";
-//    }
+    NSString *strAisle = @"Lunch On The Go";
+    if (self.rowSelectedMeal  == 1){
+        strAisle = @"Lunch On The Go";
+        NSLog(@"straisl");
+    } else if (self.rowSelectedMeal  == 2){
+        strAisle = @"Desserts & Snacks On The Go";
+    } else if (self.rowSelectedMeal  == 3){
+        strAisle = @"Lunch On The Go";
+    } else {
+        strAisle = @"Breakfast On The Go";
+    }
 
     
     

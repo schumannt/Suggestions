@@ -10,7 +10,6 @@
 
 @interface ViewControllerChoose : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-- (IBAction) BtnSelect;
 
 @property (nonatomic, weak) IBOutlet UILabel *lblRemaining;
 @property (nonatomic, weak) IBOutlet UILabel *lblBurnt;
