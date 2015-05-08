@@ -77,6 +77,22 @@
     }
 }
 
+- ( NSString *)pickerView:( UIPickerView *)pickerView titleForRow:( NSInteger)row forComponent:( NSInteger)component
+{
+    if(component == 0)
+    {
+        return [ self.marMeal objectAtIndex:row];
+    }
+    if(component == 1)
+    {
+        return [ self.marType objectAtIndex:row];
+    }
+    else
+    {
+        return [ self.marCost objectAtIndex:row];
+    }
+}
+
 
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -86,7 +102,8 @@
     NSInteger firstComponentRow = [self.picker selectedRowInComponent:0];
     NSInteger secondComponentRow = [self.picker selectedRowInComponent:1];
     NSInteger thirdComponentRow = [self.picker selectedRowInComponent:2];
-    
+   
+    /*
     switch(firstComponentRow)
     {
         case 0:
@@ -123,6 +140,7 @@
             self.lblCostChoice.text = @"£££";
             break;
     }
+     */
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

@@ -43,7 +43,7 @@
         strAisle = @"Lunch On The Go";
         NSLog(@"straisl");
     } else if (self.rowSelectedMeal  == 2){
-        strAisle = @"Desserts & Snacks On The Go";
+        strAisle = @"Crisps & Snacks";
     } else if (self.rowSelectedMeal  == 3){
         strAisle = @"Lunch On The Go";
     } else {
@@ -60,7 +60,7 @@
     NSLog(@"this is printing vcc.lblmealchoice %@", vcc.lblMealChoice.text);
     
     NSString *strFoodQuery = [NSString stringWithFormat:@"{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"default_field\":\"product.aisle\",\"query\":\"%@ \"}},{\"range\":{\"product.Cals\":{\"from\":\"%@\",\"to\":\"%@\"}}},{\"query_string\":{\"default_field\":\"product.store_availability.store\",\"query\":\"%@\"}}],\"must_not\":[],\"should\":[]}},\"from\":0,\"size\":10,\"sort\":[],\"facets\":{}}", strAisle, strCalsStart, strCalsEnd, strStoreNum];
-    //    NSLog(strFoodQuery);
+        NSLog(strFoodQuery);
     
     NSData* cData = [strFoodQuery dataUsingEncoding:NSUTF8StringEncoding];
     
