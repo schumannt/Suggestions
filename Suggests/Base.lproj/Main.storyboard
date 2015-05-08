@@ -353,23 +353,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Data Table.png" translatesAutoresizingMaskIntoConstraints="NO" id="i8S-4i-rie">
+                                <rect key="frame" x="10" y="302" width="199" height="190"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuL-in-aib">
-                                <rect key="frame" x="73" y="135" width="174" height="182"/>
+                                <rect key="frame" x="73" y="102" width="174" height="182"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wme-wG-CkF">
-                                <rect key="frame" x="85" y="342" width="171" height="52"/>
+                                <rect key="frame" x="244" y="323" width="60" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calorie Count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgR-Mi-PUB">
-                                <rect key="frame" x="85" y="402" width="203" height="59"/>
+                                <rect key="frame" x="109" y="332" width="113" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRE-Ja-BdM">
-                                <rect key="frame" x="73" y="85" width="183" height="21"/>
+                                <rect key="frame" x="10" y="78" width="310" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYS-ko-lxL">
+                                <rect key="frame" x="123" y="386" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY0-HY-vDU">
+                                <rect key="frame" x="123" y="424" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sugars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4x-tl-qYd">
+                                <rect key="frame" x="123" y="460" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYx-Be-BBi">
+                                <rect key="frame" x="244" y="438" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -382,7 +409,11 @@
                         <outlet property="ivProductImageDetail" destination="VuL-in-aib" id="YyE-ij-NF6"/>
                         <outlet property="lblCalorieCount" destination="YgR-Mi-PUB" id="jAP-Jo-yZY"/>
                         <outlet property="lblDescription" destination="KRE-Ja-BdM" id="cDL-1x-4sJ"/>
+                        <outlet property="lblFat" destination="sYS-ko-lxL" id="AlJ-SP-FeO"/>
+                        <outlet property="lblLocation" destination="YYx-Be-BBi" id="rg0-7Q-h4n"/>
                         <outlet property="lblPrice" destination="Wme-wG-CkF" id="haD-4O-exb"/>
+                        <outlet property="lblSalt" destination="mY0-HY-vDU" id="2mW-w1-71g"/>
+                        <outlet property="lblSugar" destination="U4x-tl-qYd" id="hYM-An-Ok1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3m-hq-gkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -442,6 +473,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Data Table.png" width="202" height="252"/>
         <image name="FeedMe Fit Data.png" width="504" height="154"/>
         <image name="Logon Heart.png" width="404" height="800"/>
         <image name="Question Icon.png" width="35" height="40"/>

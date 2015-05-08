@@ -70,9 +70,9 @@
         strAisle = @"Crisps & Snacks";
         if (self.rowSelectedHealth  == 0){
             strCalsStart = @"1";
-            strCalsEnd = @"300";
+            strCalsEnd = @"200";
         } else {
-            strCalsStart = @"301";
+            strCalsStart = @"201";
             strCalsEnd = @"600";
         }
         if (self.rowSelectedCost  == 0){

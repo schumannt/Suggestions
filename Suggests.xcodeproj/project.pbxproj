@@ -25,6 +25,7 @@
 		163A08701AFC5C9900482B7B /* Logon Heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A086E1AFC5C9900482B7B /* Logon Heart.png */; };
 		9C679BBB1AFC16A7007BA7CC /* ViewControllerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */; };
 		9C679BBE1AFC16E3007BA7CC /* TableViewCellSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C679BBD1AFC16E3007BA7CC /* TableViewCellSettings.m */; };
+		DEC6316F1AFC7E8700B32D59 /* Data Table.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC6316E1AFC7E8700B32D59 /* Data Table.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSettings.m; sourceTree = "<group>"; };
 		9C679BBC1AFC16E3007BA7CC /* TableViewCellSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellSettings.h; sourceTree = "<group>"; };
 		9C679BBD1AFC16E3007BA7CC /* TableViewCellSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellSettings.m; sourceTree = "<group>"; };
+		DEC6316E1AFC7E8700B32D59 /* Data Table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Data Table.png"; path = "../../../../Downloads/Data Table.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		163A084E1AFB871000482B7B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DEC6316E1AFC7E8700B32D59 /* Data Table.png */,
 				163A086D1AFC5C9900482B7B /* Feed Icon Actual Use.png */,
 				163A086E1AFC5C9900482B7B /* Logon Heart.png */,
 			);
@@ -287,6 +290,7 @@
 				163A08341AFB80F900482B7B /* Main.storyboard in Resources */,
 				163A08391AFB80F900482B7B /* LaunchScreen.xib in Resources */,
 				163A08361AFB80F900482B7B /* Images.xcassets in Resources */,
+				DEC6316F1AFC7E8700B32D59 /* Data Table.png in Resources */,
 				163A086F1AFC5C9900482B7B /* Feed Icon Actual Use.png in Resources */,
 				163A08701AFC5C9900482B7B /* Logon Heart.png in Resources */,
 			);
