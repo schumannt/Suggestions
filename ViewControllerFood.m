@@ -86,7 +86,7 @@
             strPriceEnd = @"10";
         }
     } else if (self.rowSelectedMeal  == 3){
-        strAisle = @"Lunch On The Go";
+        strAisle = @"Healthy Ready Meals";
         if (self.rowSelectedHealth  == 0){
             strCalsStart = @"1";
             strCalsEnd = @"600";
@@ -96,12 +96,12 @@
         }
         if (self.rowSelectedCost  == 0){
             strPriceStart = @"0";
-            strPriceEnd = @"2";
+            strPriceEnd = @"3";
         } else if (self.rowSelectedCost  == 1){
-            strPriceStart = @"2";
-            strPriceEnd = @"4";
+            strPriceStart = @"3";
+            strPriceEnd = @"5";
         } else{
-            strPriceStart = @"4";
+            strPriceStart = @"5";
             strPriceEnd = @"10";
         }
     } else if (self.rowSelectedMeal  == 4){
@@ -127,9 +127,9 @@
         strAisle = @"Breakfast On The Go";
         if (self.rowSelectedHealth  == 0){
             strCalsStart = @"1";
-            strCalsEnd = @"700";
+            strCalsEnd = @"500";
         } else {
-            strCalsStart = @"701";
+            strCalsStart = @"501";
             strCalsEnd = @"1200";
         }
         if (self.rowSelectedCost  == 0){

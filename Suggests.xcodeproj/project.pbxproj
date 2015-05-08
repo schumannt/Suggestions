@@ -23,9 +23,13 @@
 		163A08681AFBC1F400482B7B /* ViewControllerInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 163A08671AFBC1F400482B7B /* ViewControllerInformation.m */; };
 		163A086F1AFC5C9900482B7B /* Feed Icon Actual Use.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A086D1AFC5C9900482B7B /* Feed Icon Actual Use.png */; };
 		163A08701AFC5C9900482B7B /* Logon Heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A086E1AFC5C9900482B7B /* Logon Heart.png */; };
+		163A08761AFC852D00482B7B /* Data Table.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08711AFC852C00482B7B /* Data Table.png */; };
+		163A08771AFC852D00482B7B /* Feed Icon Actual Use (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08721AFC852C00482B7B /* Feed Icon Actual Use (1).png */; };
+		163A08781AFC852D00482B7B /* FeedMe Fit Data (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08731AFC852D00482B7B /* FeedMe Fit Data (1).png */; };
+		163A08791AFC852D00482B7B /* Logon Heart (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08741AFC852D00482B7B /* Logon Heart (1).png */; };
+		163A087A1AFC852D00482B7B /* settings (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08751AFC852D00482B7B /* settings (2).png */; };
 		9C679BBB1AFC16A7007BA7CC /* ViewControllerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */; };
 		9C679BBE1AFC16E3007BA7CC /* TableViewCellSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C679BBD1AFC16E3007BA7CC /* TableViewCellSettings.m */; };
-		DEC6316F1AFC7E8700B32D59 /* Data Table.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC6316E1AFC7E8700B32D59 /* Data Table.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,11 +72,15 @@
 		163A08671AFBC1F400482B7B /* ViewControllerInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerInformation.m; sourceTree = "<group>"; };
 		163A086D1AFC5C9900482B7B /* Feed Icon Actual Use.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed Icon Actual Use.png"; sourceTree = "<group>"; };
 		163A086E1AFC5C9900482B7B /* Logon Heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logon Heart.png"; sourceTree = "<group>"; };
+		163A08711AFC852C00482B7B /* Data Table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Data Table.png"; sourceTree = "<group>"; };
+		163A08721AFC852C00482B7B /* Feed Icon Actual Use (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed Icon Actual Use (1).png"; sourceTree = "<group>"; };
+		163A08731AFC852D00482B7B /* FeedMe Fit Data (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FeedMe Fit Data (1).png"; sourceTree = "<group>"; };
+		163A08741AFC852D00482B7B /* Logon Heart (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logon Heart (1).png"; sourceTree = "<group>"; };
+		163A08751AFC852D00482B7B /* settings (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings (2).png"; sourceTree = "<group>"; };
 		9C679BB91AFC16A7007BA7CC /* ViewControllerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSettings.h; sourceTree = "<group>"; };
 		9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSettings.m; sourceTree = "<group>"; };
 		9C679BBC1AFC16E3007BA7CC /* TableViewCellSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellSettings.h; sourceTree = "<group>"; };
 		9C679BBD1AFC16E3007BA7CC /* TableViewCellSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellSettings.m; sourceTree = "<group>"; };
-		DEC6316E1AFC7E8700B32D59 /* Data Table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Data Table.png"; path = "../../../../Downloads/Data Table.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +127,8 @@
 		163A08271AFB80F900482B7B /* Suggests */ = {
 			isa = PBXGroup;
 			children = (
-				163A082C1AFB80F900482B7B /* AppDelegate.h */,
 				163A082D1AFB80F900482B7B /* AppDelegate.m */,
+				163A082C1AFB80F900482B7B /* AppDelegate.h */,
 				163A08351AFB80F900482B7B /* Images.xcassets */,
 				163A08371AFB80F900482B7B /* LaunchScreen.xib */,
 				163A08281AFB80F900482B7B /* Supporting Files */,
@@ -157,7 +165,11 @@
 		163A084E1AFB871000482B7B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				DEC6316E1AFC7E8700B32D59 /* Data Table.png */,
+				163A08711AFC852C00482B7B /* Data Table.png */,
+				163A08721AFC852C00482B7B /* Feed Icon Actual Use (1).png */,
+				163A08731AFC852D00482B7B /* FeedMe Fit Data (1).png */,
+				163A08741AFC852D00482B7B /* Logon Heart (1).png */,
+				163A08751AFC852D00482B7B /* settings (2).png */,
 				163A086D1AFC5C9900482B7B /* Feed Icon Actual Use.png */,
 				163A086E1AFC5C9900482B7B /* Logon Heart.png */,
 			);
@@ -288,10 +300,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				163A08341AFB80F900482B7B /* Main.storyboard in Resources */,
+				163A08791AFC852D00482B7B /* Logon Heart (1).png in Resources */,
 				163A08391AFB80F900482B7B /* LaunchScreen.xib in Resources */,
 				163A08361AFB80F900482B7B /* Images.xcassets in Resources */,
-				DEC6316F1AFC7E8700B32D59 /* Data Table.png in Resources */,
+				163A08761AFC852D00482B7B /* Data Table.png in Resources */,
+				163A087A1AFC852D00482B7B /* settings (2).png in Resources */,
+				163A08771AFC852D00482B7B /* Feed Icon Actual Use (1).png in Resources */,
 				163A086F1AFC5C9900482B7B /* Feed Icon Actual Use.png in Resources */,
+				163A08781AFC852D00482B7B /* FeedMe Fit Data (1).png in Resources */,
 				163A08701AFC5C9900482B7B /* Logon Heart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

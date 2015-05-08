@@ -21,4 +21,11 @@
 
 @property (nonatomic, strong) NSMutableDictionary *dProductDetail;
 
+@property (nonatomic , weak ) IBOutlet UILabel *valueLabel;
+@property (nonatomic , weak ) IBOutlet UIStepper *stepper;
+
+- ( IBAction)stepperValueChanged:( UIStepper *)sender;
+- ( IBAction) BtnFitBit;
+
+
 @end

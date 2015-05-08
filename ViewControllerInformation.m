@@ -7,6 +7,8 @@
 //
 
 #import "ViewControllerInformation.h"
+#import "AppDelegate.h"
+#import "ViewControllerChoose.h"
 
 @interface ViewControllerInformation ()
 
@@ -33,6 +35,10 @@
     self.lblSalt.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Salt"]];
     self.lblSugar.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Sugar"]];
     
+    self. stepper. wraps = YES; self. stepper. autorepeat = YES;
+    NSUInteger value = self. stepper. value; self. valueLabel. text = [ NSString stringWithFormat: @"%02d", value];
+    
+    self . stepper .maximumValue = 10 ;
     
 //    NSMutableArray *marLocation = [[NSMutableArray alloc] init];
 //    [marLocation addObject:@"Aisle 4, on right];
@@ -60,5 +66,54 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- ( IBAction)stepperValueChanged:( UIStepper *)sender
+{
+    NSUInteger value = sender. value;
+    self. valueLabel. text = [ NSString stringWithFormat: @"%02d", value];
+}
+
+
+
+- ( IBAction) BtnFitBit {
+    
+    UIAlertView *alert = [[ UIAlertView alloc ] initWithTitle :@"Information" message :@"Are you sure you want to add this to your fitbit data?"   delegate : self cancelButtonTitle :@"No" otherButtonTitles :@"Yes" , nil ];
+    [alert show];
+    
+}
+
+#pragma mark -
+#pragma mark Alert View
+
+- ( void) alertView:( UIAlertView *)alertView clickedButtonAtIndex:( NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+//        UINavigationController *vc = [ self . storyboard instantiateViewControllerWithIdentifier : @"Terry" ];
+//        [ self presentViewController :vc animated : YES completion : nil ];
+        NSInteger qty = [self.valueLabel.text intValue];
+        NSInteger cals = [self.lblCalorieCount.text intValue];
+        NSInteger *calsToDeduct = qty*cals;
+        [AppDelegate class]
+        NSLog(@"%d", calsToDeduct);
+        [self.navigationController popToRootViewControllerAnimated:true];
+    }
+}
+
+
+
+//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    
+//    if ([segue.identifier isEqualToString:@"segueToDetailView"]) {
+//        
+//        DetailViewController *vc = segue.destinationViewController;
+//        int intSelectedRow = [self.tvGroceries indexPathForSelectedRow].row;
+//        
+//        GroceryCell *cell = (GroceryCell *)[self.tvGroceries cellForRowAtIndexPath:[self.tvGroceries indexPathForSelectedRow]];
+//        
+//        vc.dProduct= self.marGroceries[intSelectedRow];
+//        vc.imgProductImage = cell.ivImage.image;
+//        
+//    }
+//    
+//}
 
 @end
