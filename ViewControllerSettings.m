@@ -29,21 +29,15 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.marSettings.count;
+    NSLog(@"self mar settings count %lu", (unsigned long)self.marSettings.count);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
-    if (cell ==Nil)
-    {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    else {
-        
-    }
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
     cell.textLabel.text = self.marSettings[indexPath.row];
+    NSLog(@"cell text label %@", cell.textLabel.text);
     return cell;
 }
 
@@ -52,6 +46,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.marSettings = [[NSMutableArray alloc] initWithObjects:@"Connections", @"Profile", @"Help", @"Terms of use", @"Logout", nil];
+    NSLog(@"marsettings, %@", self.marSettings);
+    
 }
 
 - (void)didReceiveMemoryWarning

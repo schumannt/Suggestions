@@ -9,6 +9,7 @@
 #import "ViewControllerChoose.h"
 #import "ViewControllerFood.h"
 #import "ViewControllerSignIn.h"
+#import "AppDelegate.h"
 
 @interface ViewControllerChoose ()
 
@@ -21,6 +22,9 @@
     // Do any additional setup after loading the view.
     ViewControllerSignIn *vcs = [self.storyboard instantiateViewControllerWithIdentifier:@"SignIn"];
     [self presentViewController:vcs animated:NO completion:nil];
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    appDelegate.myVC = self;
     
     // Initialize Data
     
@@ -95,6 +99,7 @@
     {
         return [ self.marCost objectAtIndex:row];
     }
+
 }
 
 
@@ -106,7 +111,7 @@
     NSInteger firstComponentRow = [self.picker selectedRowInComponent:0];
     NSInteger secondComponentRow = [self.picker selectedRowInComponent:1];
     NSInteger thirdComponentRow = [self.picker selectedRowInComponent:2];
-   
+       
     /*
     switch(firstComponentRow)
     {

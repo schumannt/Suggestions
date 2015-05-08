@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewControllerChoose.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+@property (nonatomic, strong) ViewControllerChoose *myVC;
 
 @end
 

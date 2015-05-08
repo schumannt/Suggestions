@@ -33,21 +33,22 @@
     self.ivProductImageDetail.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:biggerImageURL]]];
     self.lblFat.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Fat"]];
     self.lblSalt.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Salt"]];
-    self.lblSugar.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Sugar"]];
+    self.lblSugar.text =[NSString stringWithFormat:@"%@", dProductDetailAfterSource[@"Sugars"]];
     
     self. stepper. wraps = YES; self. stepper. autorepeat = YES;
     NSUInteger value = self. stepper. value; self. valueLabel. text = [ NSString stringWithFormat: @"%02d", value];
     
     self . stepper .maximumValue = 10 ;
     
-//    NSMutableArray *marLocation = [[NSMutableArray alloc] init];
-//    [marLocation addObject:@"Aisle 4, on right];
-//    [marLocation addObject:@"Aisle 3, half way"];
-//    [marLocation addObject:@"Aisle 11, on left"];
-//    [marLocation addObject:@"Aisle 1, at the end"];
-//    [marLocation addObject:@"Aisle 2, half way"];
-    
+    NSMutableArray *marLocation = [[NSMutableArray alloc] init];
+    [marLocation addObject:@"Aisle 4, on right"];
+    [marLocation addObject:@"Aisle 3, half way"];
+    [marLocation addObject:@"Aisle 11, on left"];
+    [marLocation addObject:@"Aisle 1, at the end"];
+    [marLocation addObject:@"Aisle 2, half way"];
+    NSString *strLocate = marLocation[arc4random_uniform(4)];
     //NSLog(@"self.dproductdetail cal %@", self.dProductDetail[@"_source"]);
+    self.lblLocation.text = strLocate;
     
     
 }
@@ -77,8 +78,11 @@
 
 - ( IBAction) BtnFitBit {
     
-    UIAlertView *alert = [[ UIAlertView alloc ] initWithTitle :@"Information" message :@"Are you sure you want to add this to your fitbit data?"   delegate : self cancelButtonTitle :@"No" otherButtonTitles :@"Yes" , nil ];
+    UIAlertView *alert = [[ UIAlertView alloc ] initWithTitle :@"Information" message :@"Are you sure?"   delegate : self cancelButtonTitle :@"No" otherButtonTitles :@"Yes" , nil ];
     [alert show];
+    
+    //UIAlertView *alert = [[ UIAlertView alloc ] initWithTitle :@"Information" message :@"The product has been added to Fitbit"   delegate : self cancelButtonTitle :@"No" otherButtonTitles :@"Yes" , nil ];
+    //[alert show];
     
 }
 
@@ -89,11 +93,20 @@
     if (buttonIndex == 1) {
 //        UINavigationController *vc = [ self . storyboard instantiateViewControllerWithIdentifier : @"Terry" ];
 //        [ self presentViewController :vc animated : YES completion : nil ];
-        NSInteger qty = [self.valueLabel.text intValue];
-        NSInteger cals = [self.lblCalorieCount.text intValue];
-        NSInteger *calsToDeduct = qty*cals;
-        [AppDelegate class]
+        int qty = [self.valueLabel.text intValue];
+        int cals = [self.lblCalorieCount.text intValue];
+        int calsToDeduct = qty*cals;
+        
         NSLog(@"%d", calsToDeduct);
+        
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        
+        int currentCals = [appDelegate.myVC.lblRemaining.text intValue];
+        currentCals = currentCals - calsToDeduct;
+        
+        NSString *newLabelCals = [NSString stringWithFormat:@"%d", currentCals];
+        appDelegate.myVC.lblRemaining.text = newLabelCals;
+        
         [self.navigationController popToRootViewControllerAnimated:true];
     }
 }

@@ -28,6 +28,11 @@
 		163A08781AFC852D00482B7B /* FeedMe Fit Data (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08731AFC852D00482B7B /* FeedMe Fit Data (1).png */; };
 		163A08791AFC852D00482B7B /* Logon Heart (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08741AFC852D00482B7B /* Logon Heart (1).png */; };
 		163A087A1AFC852D00482B7B /* settings (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08751AFC852D00482B7B /* settings (2).png */; };
+		163A087C1AFCA84800482B7B /* Data Table This One.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A087B1AFCA84800482B7B /* Data Table This One.png */; };
+		163A087E1AFCA93E00482B7B /* Fitbit Logo Use.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A087D1AFCA93E00482B7B /* Fitbit Logo Use.png */; };
+		163A08801AFCB36300482B7B /* Data Table This One Actually.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A087F1AFCB36300482B7B /* Data Table This One Actually.png */; };
+		163A08821AFCBE3300482B7B /* Update_FITBIT_LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08811AFCBE3300482B7B /* Update_FITBIT_LOGO.png */; };
+		163A08841AFCBF3100482B7B /* Connections.png in Resources */ = {isa = PBXBuildFile; fileRef = 163A08831AFCBF3100482B7B /* Connections.png */; };
 		9C679BBB1AFC16A7007BA7CC /* ViewControllerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */; };
 		9C679BBE1AFC16E3007BA7CC /* TableViewCellSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C679BBD1AFC16E3007BA7CC /* TableViewCellSettings.m */; };
 /* End PBXBuildFile section */
@@ -77,6 +82,11 @@
 		163A08731AFC852D00482B7B /* FeedMe Fit Data (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FeedMe Fit Data (1).png"; sourceTree = "<group>"; };
 		163A08741AFC852D00482B7B /* Logon Heart (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logon Heart (1).png"; sourceTree = "<group>"; };
 		163A08751AFC852D00482B7B /* settings (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings (2).png"; sourceTree = "<group>"; };
+		163A087B1AFCA84800482B7B /* Data Table This One.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Data Table This One.png"; sourceTree = "<group>"; };
+		163A087D1AFCA93E00482B7B /* Fitbit Logo Use.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fitbit Logo Use.png"; sourceTree = "<group>"; };
+		163A087F1AFCB36300482B7B /* Data Table This One Actually.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Data Table This One Actually.png"; sourceTree = "<group>"; };
+		163A08811AFCBE3300482B7B /* Update_FITBIT_LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Update_FITBIT_LOGO.png; sourceTree = "<group>"; };
+		163A08831AFCBF3100482B7B /* Connections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Connections.png; sourceTree = "<group>"; };
 		9C679BB91AFC16A7007BA7CC /* ViewControllerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSettings.h; sourceTree = "<group>"; };
 		9C679BBA1AFC16A7007BA7CC /* ViewControllerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSettings.m; sourceTree = "<group>"; };
 		9C679BBC1AFC16E3007BA7CC /* TableViewCellSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellSettings.h; sourceTree = "<group>"; };
@@ -165,6 +175,11 @@
 		163A084E1AFB871000482B7B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				163A08831AFCBF3100482B7B /* Connections.png */,
+				163A08811AFCBE3300482B7B /* Update_FITBIT_LOGO.png */,
+				163A087F1AFCB36300482B7B /* Data Table This One Actually.png */,
+				163A087D1AFCA93E00482B7B /* Fitbit Logo Use.png */,
+				163A087B1AFCA84800482B7B /* Data Table This One.png */,
 				163A08711AFC852C00482B7B /* Data Table.png */,
 				163A08721AFC852C00482B7B /* Feed Icon Actual Use (1).png */,
 				163A08731AFC852D00482B7B /* FeedMe Fit Data (1).png */,
@@ -302,13 +317,18 @@
 				163A08341AFB80F900482B7B /* Main.storyboard in Resources */,
 				163A08791AFC852D00482B7B /* Logon Heart (1).png in Resources */,
 				163A08391AFB80F900482B7B /* LaunchScreen.xib in Resources */,
+				163A08821AFCBE3300482B7B /* Update_FITBIT_LOGO.png in Resources */,
 				163A08361AFB80F900482B7B /* Images.xcassets in Resources */,
 				163A08761AFC852D00482B7B /* Data Table.png in Resources */,
 				163A087A1AFC852D00482B7B /* settings (2).png in Resources */,
+				163A087E1AFCA93E00482B7B /* Fitbit Logo Use.png in Resources */,
 				163A08771AFC852D00482B7B /* Feed Icon Actual Use (1).png in Resources */,
 				163A086F1AFC5C9900482B7B /* Feed Icon Actual Use.png in Resources */,
 				163A08781AFC852D00482B7B /* FeedMe Fit Data (1).png in Resources */,
+				163A08801AFCB36300482B7B /* Data Table This One Actually.png in Resources */,
+				163A087C1AFCA84800482B7B /* Data Table This One.png in Resources */,
 				163A08701AFC5C9900482B7B /* Logon Heart.png in Resources */,
+				163A08841AFCBF3100482B7B /* Connections.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
