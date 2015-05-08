@@ -50,7 +50,6 @@
     //NSLog(@"self.dproductdetail cal %@", self.dProductDetail[@"_source"]);
     self.lblLocation.text = strLocate;
     
-    
 }
 
 - (void)didReceiveMemoryWarning {
